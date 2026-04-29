@@ -1,0 +1,118 @@
+<?php
+if (empty($auth->getUser()['admin_id']))
+{
+    header('Location: ' . $seoUrl->generate('administration/login.php'));
+    exit();
+}
+
+if (!$_GET['id'] || !is_numeric($_GET['id']))
+{
+    header('Location: ' . $seoUrl->generate('administration/service.php'));
+    exit();
+}
+
+$breadcrumb = new Breadcrumb();
+$breadcrumb->addItem(TEXT_SERVICE, $seoUrl->generate('administration/service.php'));
+$breadcrumb->addItem(PAGE_TITLE, null);
+
+$sql = "SELECT s.service_id, s.sort_order, s.clean_cost, 
+        s.tax_id, s.creation_date, s.last_modified_date,
+        ROUND(s.clean_cost * (1 + t.factor), 2) AS final_cost
+        FROM service s
+        JOIN tax t ON s.tax_id = t.tax_id 
+        WHERE s.service_id = ?";
+
+$service = $db->query($sql, [$_GET['id']])->fetch();
+
+if (!$service)
+{
+    header("HTTP/1.0 404 Not Found");
+    exit();
+}
+
+$sql_description = "SELECT * FROM service_description sd
+                    WHERE sd.service_id = ?";
+
+$service_description = $db->query($sql_description, [$_GET['id']])->fetchAll();
+
+$sql = "SELECT 
+        t.tax_id, 
+        CONCAT(ROUND(t.factor * 100, 2), '%') AS factor_percentage
+        FROM tax t
+        ORDER BY t.factor DESC";
+
+$results = $db->query($sql, [])->fetchAll();
+$default_tax_option = 0;
+$tax_options = [];
+foreach ($results as $x)
+{
+    if (empty($default_tax_option))
+    {
+        $default_tax_option = $x['tax_id'];
+    }
+    $tax_options[] = [
+        'value' => $x['tax_id'],
+        'label' => $x['factor_percentage']
+    ];
+}
+
+$form_schema = [
+    'mainFields' => [
+        'service_id' => [
+            'type'     => 'hidden',
+            'label'    => '',
+            'required' => true,
+            'default'  => $service['service_id']
+        ],
+        'sort_order' => [
+            'type'     => 'number',
+            'label'    => TEXT_ITEMS_SORT_ORDER,
+            'required' => true,
+            'default'  => $service['sort_order']
+        ],
+        'clean_cost' => [
+            'type'     => 'text',
+            'label'    => TEXT_ITEMS_CLEAN_PRICE,
+            'required' => true,
+            'default'  => $service['clean_cost']
+        ],
+        'final_cost' => [
+            'type'     => 'custom_text',
+            'label'    => TEXT_ITEMS_FINAL_PRICE,
+            'required' => false,
+            'default'  => $service['final_cost'] . ' €'
+        ],
+        'tax_id' => [
+            'type'     => 'select',
+            'label'    => TEXT_ITEMS_TAX,
+            'required' => true,
+            'default'  => $default_tax_option,
+            'options'  => $tax_options
+        ],
+    ],
+    'cancel_url' => $seoUrl->generate('administration/service.php'),
+    'creation_date' => (new DateTime($service['creation_date']))->format('d/m/Y H:i:s'),
+    'last_modified_date' => (new DateTime($service['last_modified_date']))->format('d/m/Y H:i:s')
+];
+
+$languagesAll = $languages->getLanguages();
+foreach ($languagesAll as $lang)
+{
+    $lang_id = $lang['language_id'];
+    $desc = array_filter($service_description, function ($d) use ($lang_id)
+    {
+        return $d['language_id'] == $lang_id;
+    });
+
+    // Reindex array after filtering
+    $desc = array_values($desc);
+
+    $form_schema['localFields'][$lang_id] = [
+        'title' => [
+            'type'     => 'text',
+            'label'    => TEXT_ITEMS_TITLE,
+            'required' => true,
+            'default'  => $desc[0]['title'] ?? ''
+        ]
+    ];
+}

@@ -1,0 +1,2557 @@
+{
+    "language": [
+        {
+            "name": "Greek",
+            "code": "el",
+            "flag": "/images/greek.svg",
+            "directory": "greek"
+        },
+        {
+            "name": "English",
+            "code": "en",
+            "flag": "/images/english.svg",
+            "directory": "english"
+        }
+    ],
+    "tax": [
+        {
+            "factor": "0.2400"
+        }
+    ],
+    "appointment_status": [
+        {
+            "is_default": 1,
+            "sort_order": 1,
+            "color": "#ff9800"
+        },
+        {
+            "is_default": 0,
+            "sort_order": 2,
+            "color": "#4caf50"
+        },
+        {
+            "is_default": 0,
+            "sort_order": 3,
+            "color": "#f44336"
+        }
+    ],
+    "appointment_status_description": [
+        {
+            "appointment_status_id": "{{appointment_status:0}}",
+            "language_id": "{{language:0}}",
+            "title": "Προγραμματισμένο"
+        },
+        {
+            "appointment_status_id": "{{appointment_status:0}}",
+            "language_id": "{{language:1}}",
+            "title": "Scheduled"
+        },
+        {
+            "appointment_status_id": "{{appointment_status:1}}",
+            "language_id": "{{language:0}}",
+            "title": "Ολοκληρωμένο"
+        },
+        {
+            "appointment_status_id": "{{appointment_status:1}}",
+            "language_id": "{{language:1}}",
+            "title": "Completed"
+        },
+        {
+            "appointment_status_id": "{{appointment_status:2}}",
+            "language_id": "{{language:0}}",
+            "title": "Ακυρωμένο"
+        },
+        {
+            "appointment_status_id": "{{appointment_status:2}}",
+            "language_id": "{{language:1}}",
+            "title": "Cancelled"
+        }
+    ],
+    "invoice_settings": [
+        {
+            "company_name": "Diet Solutions O.E.",
+            "company_title": "Υπηρεσίες Διαιτολογίας",
+            "vat_number": "123456789",
+            "tax_office": "ΔΟΥ Αθηνών",
+            "address_street": "Πανεπιστημίου",
+            "address_number": "10",
+            "city": "Αθήνα",
+            "postal_code": "10564",
+            "email": "info@dietsolutions.gr",
+            "phone": "6983231764"
+        }
+    ],
+    "user": [
+        {
+            "username": "mpapadakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "gstavrakakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mkallergi",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "gsfakianakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mmarakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "ifragkiadakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "kgiannarakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "nkoutentakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "zaerakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mxylouris",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "gvrentzos",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mskoulas",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mplaitis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mpsarakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "ekokkinos",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "managnostakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "atroullis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "gkalogerakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mmarkakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "emichelakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "msyngelakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "rvardoulakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mdaskalakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mgeorgakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "gsiganos",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mpetrakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "zmanousakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mchatziandroulakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "apapoutsakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "pkaralakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mvenieris",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "kserpetsidakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mvasilakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "skonstantakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "gstratigakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        },
+        {
+            "username": "mspanakis",
+            "password_hash": "$2y$10$/yjNaRt7Stw7IncirxmYL.bneigiLP7thp9d9fBvjQOTOjCQSXGfu",
+            "active": 1
+        }
+    ],
+    "dietitian": [
+        {
+            "user_id": "{{user:0}}",
+            "first_name": "Μανώλης",
+            "last_name": "Παπαδάκης",
+            "email": "m.papadakis@georgemavrikisthesis.eu",
+            "phone": "6971234567"
+        },
+        {
+            "user_id": "{{user:1}}",
+            "first_name": "Γιώργος",
+            "last_name": "Σταυρακάκης",
+            "email": "g.stavrakakis@georgemavrikisthesis.eu",
+            "phone": "6987654321"
+        },
+        {
+            "user_id": "{{user:2}}",
+            "first_name": "Μαρία",
+            "last_name": "Καλλέργη",
+            "email": "m.kallergi@georgemavrikisthesis.eu",
+            "phone": "6941234567"
+        }
+    ],
+    "client": [
+        {
+            "user_id": "{{user:0}}",
+            "first_name": "Μανώλης",
+            "last_name": "Παπαδάκης",
+            "email": "cl.m.papadakis@georgemavrikisthesis.eu",
+            "phone": "6971110001",
+            "dob": "1980-05-15",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:1}}",
+            "first_name": "Γιώργος",
+            "last_name": "Σταυρακάκης",
+            "email": "cl.g.stavrakakis@georgemavrikisthesis.eu",
+            "phone": "6971110002",
+            "dob": "1982-11-20",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:2}}",
+            "first_name": "Μαρία",
+            "last_name": "Καλλέργη",
+            "email": "cl.m.kallergi@georgemavrikisthesis.eu",
+            "phone": "6971110003",
+            "dob": "1985-03-10",
+            "gender": "F"
+        },
+        {
+            "user_id": "{{user:3}}",
+            "first_name": "Γιώργος",
+            "last_name": "Σφακιανάκης",
+            "email": "g.sfakianakis@georgemavrikisthesis.eu",
+            "phone": "6971110004",
+            "dob": "1978-02-28",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:4}}",
+            "first_name": "Μανώλης",
+            "last_name": "Μαράκης",
+            "email": "m.marakis@georgemavrikisthesis.eu",
+            "phone": "6971110005",
+            "dob": "1990-10-10",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:5}}",
+            "first_name": "Γιάννης",
+            "last_name": "Φραγκιαδάκης",
+            "email": "i.fragkiadakis@georgemavrikisthesis.eu",
+            "phone": "6971110006",
+            "dob": "1983-05-15",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:6}}",
+            "first_name": "Κώστας",
+            "last_name": "Γιανναράκης",
+            "email": "k.giannarakis@georgemavrikisthesis.eu",
+            "phone": "6971110007",
+            "dob": "1981-12-12",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:7}}",
+            "first_name": "Νίκος",
+            "last_name": "Κουτεντάκης",
+            "email": "n.koutentakis@georgemavrikisthesis.eu",
+            "phone": "6971110008",
+            "dob": "1984-03-25",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:8}}",
+            "first_name": "Ζαχαρίας",
+            "last_name": "Αεράκης",
+            "email": "z.aerakis@georgemavrikisthesis.eu",
+            "phone": "6971110009",
+            "dob": "1975-01-01",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:9}}",
+            "first_name": "Μύρων",
+            "last_name": "Ξυλούρης",
+            "email": "m.xylouris@georgemavrikisthesis.eu",
+            "phone": "6971110010",
+            "dob": "1992-06-06",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:10}}",
+            "first_name": "Γιώργης",
+            "last_name": "Βρέντζος",
+            "email": "g.vrentzos@georgemavrikisthesis.eu",
+            "phone": "6971110011",
+            "dob": "1988-08-08",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:11}}",
+            "first_name": "Μιχάλης",
+            "last_name": "Σκουλάς",
+            "email": "m.skoulas@georgemavrikisthesis.eu",
+            "phone": "6971110012",
+            "dob": "1981-04-04",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:12}}",
+            "first_name": "Μανώλης",
+            "last_name": "Πλαΐτης",
+            "email": "m.plaitis@georgemavrikisthesis.eu",
+            "phone": "6971110013",
+            "dob": "1986-07-18",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:13}}",
+            "first_name": "Μάνος",
+            "last_name": "Ψαράκης",
+            "email": "m.psarakis@georgemavrikisthesis.eu",
+            "phone": "6971110014",
+            "dob": "1983-01-05",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:14}}",
+            "first_name": "Ευάγγελος",
+            "last_name": "Κόκκινος",
+            "email": "e.kokkinos@georgemavrikisthesis.eu",
+            "phone": "6971110015",
+            "dob": "1979-10-22",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:15}}",
+            "first_name": "Μανώλης",
+            "last_name": "Αναγνωστάκης",
+            "email": "m.anagnostakis@georgemavrikisthesis.eu",
+            "phone": "6971110016",
+            "dob": "1987-11-11",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:16}}",
+            "first_name": "Αρτέμης",
+            "last_name": "Τρούλλης",
+            "email": "a.troullis@georgemavrikisthesis.eu",
+            "phone": "6971110017",
+            "dob": "1985-03-30",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:17}}",
+            "first_name": "Γιάννης",
+            "last_name": "Καλογεράκης",
+            "email": "g.kalogerakis@georgemavrikisthesis.eu",
+            "phone": "6971110018",
+            "dob": "1991-05-05",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:18}}",
+            "first_name": "Μιχάλης",
+            "last_name": "Μαρκάκης",
+            "email": "m.markakis@georgemavrikisthesis.eu",
+            "phone": "6971110019",
+            "dob": "1980-09-09",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:19}}",
+            "first_name": "Ελευθέριος",
+            "last_name": "Μιχελάκης",
+            "email": "e.michelakis@georgemavrikisthesis.eu",
+            "phone": "6971110020",
+            "dob": "1984-12-12",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:20}}",
+            "first_name": "Μανώλης",
+            "last_name": "Συγγελάκης",
+            "email": "m.syngelakis@georgemavrikisthesis.eu",
+            "phone": "6971110021",
+            "dob": "1982-08-08",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:21}}",
+            "first_name": "Ρούσσος",
+            "last_name": "Βαρδουλάκης",
+            "email": "r.vardoulakis@georgemavrikisthesis.eu",
+            "phone": "6971110022",
+            "dob": "1977-06-06",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:22}}",
+            "first_name": "Μάρκος",
+            "last_name": "Δασκαλάκης",
+            "email": "m.daskalakis@georgemavrikisthesis.eu",
+            "phone": "6971110023",
+            "dob": "1989-04-04",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:23}}",
+            "first_name": "Μανώλης",
+            "last_name": "Γεωργάκης",
+            "email": "m.georgakis@georgemavrikisthesis.eu",
+            "phone": "6971110024",
+            "dob": "1983-02-02",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:24}}",
+            "first_name": "Γιώργος",
+            "last_name": "Σιγανός",
+            "email": "g.siganos@georgemavrikisthesis.eu",
+            "phone": "6971110025",
+            "dob": "1981-01-01",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:25}}",
+            "first_name": "Μιχάλης",
+            "last_name": "Πετράκης",
+            "email": "m.petrakis@georgemavrikisthesis.eu",
+            "phone": "6971110026",
+            "dob": "1988-10-10",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:26}}",
+            "first_name": "Ζαχαρίας",
+            "last_name": "Μανουσάκης",
+            "email": "z.manousakis@georgemavrikisthesis.eu",
+            "phone": "6971110027",
+            "dob": "1985-05-15",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:27}}",
+            "first_name": "Μάνος",
+            "last_name": "Χατζηανδρουλάκης",
+            "email": "m.chatziandroulakis@georgemavrikisthesis.eu",
+            "phone": "6971110028",
+            "dob": "1976-03-03",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:28}}",
+            "first_name": "Ανδρέας",
+            "last_name": "Παπουτσάκης",
+            "email": "a.papoutsakis@georgemavrikisthesis.eu",
+            "phone": "6971110029",
+            "dob": "1993-07-07",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:29}}",
+            "first_name": "Πέτρος",
+            "last_name": "Καραλάκης",
+            "email": "p.karalakis@georgemavrikisthesis.eu",
+            "phone": "6971110030",
+            "dob": "1984-08-20",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:30}}",
+            "first_name": "Μιχάλης",
+            "last_name": "Βενιέρης",
+            "email": "m.venieris@georgemavrikisthesis.eu",
+            "phone": "6971110031",
+            "dob": "1980-04-05",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:31}}",
+            "first_name": "Κώστας",
+            "last_name": "Σερπετσιδάκης",
+            "email": "k.serpetsidakis@georgemavrikisthesis.eu",
+            "phone": "6971110032",
+            "dob": "1987-09-12",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:32}}",
+            "first_name": "Μανώλης",
+            "last_name": "Βασιλάκης",
+            "email": "m.vasilakis@georgemavrikisthesis.eu",
+            "phone": "6971110033",
+            "dob": "1982-12-30",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:33}}",
+            "first_name": "Στέλιος",
+            "last_name": "Κωνσταντάκης",
+            "email": "s.konstantakis@georgemavrikisthesis.eu",
+            "phone": "6971110034",
+            "dob": "1985-06-14",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:34}}",
+            "first_name": "Γιάννης",
+            "last_name": "Στρατιγάκης",
+            "email": "g.stratigakis@georgemavrikisthesis.eu",
+            "phone": "6971110035",
+            "dob": "1978-02-28",
+            "gender": "M"
+        },
+        {
+            "user_id": "{{user:35}}",
+            "first_name": "Μάρκος",
+            "last_name": "Σπανάκης",
+            "email": "m.spanakis@georgemavrikisthesis.eu",
+            "phone": "6971110036",
+            "dob": "1990-10-10",
+            "gender": "M"
+        },
+        {
+            "user_id": null,
+            "first_name": "Νικολής",
+            "last_name": "Παπαδάκης",
+            "email": "dep1.m.papadakis@georgemavrikisthesis.eu",
+            "phone": "6971110037",
+            "dob": "2015-10-10",
+            "gender": "M"
+        },
+        {
+            "user_id": null,
+            "first_name": "Στυλιανή",
+            "last_name": "Σταυρακάκη",
+            "email": "dep1.g.stavrakakis@georgemavrikisthesis.eu",
+            "phone": "6971110038",
+            "dob": "2016-05-12",
+            "gender": "F"
+        },
+        {
+            "user_id": null,
+            "first_name": "Καλλιόπη",
+            "last_name": "Καλλέργη",
+            "email": "dep1.m.kallergi@georgemavrikisthesis.eu",
+            "phone": "6971110039",
+            "dob": "2018-02-20",
+            "gender": "F"
+        },
+        {
+            "user_id": null,
+            "first_name": "Ανδρέας",
+            "last_name": "Σφακιανάκης",
+            "email": "dep1.g.sfakianakis@georgemavrikisthesis.eu",
+            "phone": "6971110040",
+            "dob": "2017-08-14",
+            "gender": "M"
+        },
+        {
+            "user_id": null,
+            "first_name": "Μιχάλης",
+            "last_name": "Μαράκης",
+            "email": "dep1.m.marakis@georgemavrikisthesis.eu",
+            "phone": "6971110041",
+            "dob": "2019-11-30",
+            "gender": "M"
+        },
+        {
+            "user_id": null,
+            "first_name": "Μαρία",
+            "last_name": "Φραγκιαδάκη",
+            "email": "dep1.i.fragkiadakis@georgemavrikisthesis.eu",
+            "phone": "6971110042",
+            "dob": "2015-01-25",
+            "gender": "F"
+        }
+    ],
+    "client_relationships": [
+        {
+            "manager_client_id": "{{client:0}}",
+            "dependent_client_id": "{{client:36}}"
+        },
+        {
+            "manager_client_id": "{{client:1}}",
+            "dependent_client_id": "{{client:37}}"
+        },
+        {
+            "manager_client_id": "{{client:2}}",
+            "dependent_client_id": "{{client:38}}"
+        },
+        {
+            "manager_client_id": "{{client:3}}",
+            "dependent_client_id": "{{client:39}}"
+        },
+        {
+            "manager_client_id": "{{client:4}}",
+            "dependent_client_id": "{{client:40}}"
+        },
+        {
+            "manager_client_id": "{{client:5}}",
+            "dependent_client_id": "{{client:41}}"
+        }
+    ],
+    "service": [
+        {
+            "sort_order": 1,
+            "clean_cost": 48.39,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "sort_order": 2,
+            "clean_cost": 40.32,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "sort_order": 3,
+            "clean_cost": 24.19,
+            "tax_id": "{{tax:0}}"
+        }
+    ],
+    "service_description": [
+        {
+            "service_id": "{{service:0}}",
+            "language_id": "{{language:0}}",
+            "title": "Αρχική Συνεδρία"
+        },
+        {
+            "service_id": "{{service:0}}",
+            "language_id": "{{language:1}}",
+            "title": "Initial Session"
+        },
+        {
+            "service_id": "{{service:1}}",
+            "language_id": "{{language:0}}",
+            "title": "Follow-up"
+        },
+        {
+            "service_id": "{{service:1}}",
+            "language_id": "{{language:1}}",
+            "title": "Follow-up"
+        },
+        {
+            "service_id": "{{service:2}}",
+            "language_id": "{{language:0}}",
+            "title": "Ανάλυση Σύστασης Σώματος"
+        },
+        {
+            "service_id": "{{service:2}}",
+            "language_id": "{{language:1}}",
+            "title": "Body Composition Analysis"
+        }
+    ],
+    "invoice": [
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2000,
+            "client_id": "{{client:7}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2001,
+            "client_id": "{{client:7}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2002,
+            "client_id": "{{client:13}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2003,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2004,
+            "client_id": "{{client:13}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2005,
+            "client_id": "{{client:4}}",
+            "dietitian_id": "{{dietitian:0}}",
+            "canceled": 1
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2006,
+            "client_id": "{{client:9}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2007,
+            "client_id": "{{client:0}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2008,
+            "client_id": "{{client:10}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2009,
+            "client_id": "{{client:0}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2010,
+            "client_id": "{{client:8}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2011,
+            "client_id": "{{client:3}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2012,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2013,
+            "client_id": "{{client:7}}",
+            "dietitian_id": "{{dietitian:1}}",
+            "canceled": 1
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2014,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2015,
+            "client_id": "{{client:4}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2016,
+            "client_id": "{{client:2}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2017,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2018,
+            "client_id": "{{client:4}}",
+            "dietitian_id": "{{dietitian:1}}",
+            "canceled": 1
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2019,
+            "client_id": "{{client:3}}",
+            "dietitian_id": "{{dietitian:0}}",
+            "canceled": 1
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2020,
+            "client_id": "{{client:11}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2021,
+            "client_id": "{{client:9}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2022,
+            "client_id": "{{client:2}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2023,
+            "client_id": "{{client:10}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2024,
+            "client_id": "{{client:12}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2025,
+            "client_id": "{{client:11}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2026,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2027,
+            "client_id": "{{client:0}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2028,
+            "client_id": "{{client:0}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2029,
+            "client_id": "{{client:12}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2030,
+            "client_id": "{{client:3}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2031,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2032,
+            "client_id": "{{client:0}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2033,
+            "client_id": "{{client:1}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2034,
+            "client_id": "{{client:5}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2035,
+            "client_id": "{{client:5}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2036,
+            "client_id": "{{client:5}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2037,
+            "client_id": "{{client:3}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2038,
+            "client_id": "{{client:6}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2039,
+            "client_id": "{{client:9}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2040,
+            "client_id": "{{client:3}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2041,
+            "client_id": "{{client:5}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2042,
+            "client_id": "{{client:3}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2043,
+            "client_id": "{{client:12}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2044,
+            "client_id": "{{client:14}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2045,
+            "client_id": "{{client:10}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2046,
+            "client_id": "{{client:9}}",
+            "dietitian_id": "{{dietitian:0}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2047,
+            "client_id": "{{client:8}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2048,
+            "client_id": "{{client:5}}",
+            "dietitian_id": "{{dietitian:1}}"
+        },
+        {
+            "issuer_title": "Diet Solutions O.E.",
+            "issuer_name": "Diet Solutions O.E.",
+            "issuer_vat": "123456789",
+            "issuer_tax_office": "ΔΟΥ Αθηνών",
+            "issuer_address_street": "Πανεπιστημίου",
+            "issuer_address_number": "10",
+            "issuer_city": "Αθήνα",
+            "issuer_postal_code": "10564",
+            "issuer_phone": "6983231764",
+            "issuer_email": "g.mavrikis@georgemavrikisthesis.eu",
+            "serial_number": 2049,
+            "client_id": "{{client:10}}",
+            "dietitian_id": "{{dietitian:0}}"
+        }
+    ],
+    "invoice_charge": [
+        {
+            "invoice_id": "{{invoice:0}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:1}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:2}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:3}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:4}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:5}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:6}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:7}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:8}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:9}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:10}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:11}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:12}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:13}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:14}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:15}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:16}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:17}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:18}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:19}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:20}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:21}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:22}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:23}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:24}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:25}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:26}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:27}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:28}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:29}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:30}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:31}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:32}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:33}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:34}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:35}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:36}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:37}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:38}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:39}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:40}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:41}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:42}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:43}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:44}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 7.2,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:45}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:46}}",
+            "description": "Ανάλυση Σύστασης Σώματος",
+            "clean_amount": 24.19,
+            "tax_amount": 5.81,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:47}}",
+            "description": "Follow-up",
+            "clean_amount": 40.32,
+            "tax_amount": 9.68,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:48}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        },
+        {
+            "invoice_id": "{{invoice:49}}",
+            "description": "Αρχική Συνεδρία",
+            "clean_amount": 48.39,
+            "tax_amount": 11.61,
+            "tax_id": "{{tax:0}}"
+        }
+    ],
+    "appointment": [
+        {
+            "appointment_date": "2026-04-27 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:4}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:0}}"
+        },
+        {
+            "appointment_date": "2026-03-30 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:6}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:1}}"
+        },
+        {
+            "appointment_date": "2026-05-08 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:6}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:2}}"
+        },
+        {
+            "appointment_date": "2026-05-29 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:0}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:3}}"
+        },
+        {
+            "appointment_date": "2026-05-15 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:1}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:4}}"
+        },
+        {
+            "appointment_date": "2026-04-03 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:7}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:5}}"
+        },
+        {
+            "appointment_date": "2026-04-06 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:7}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:6}}"
+        },
+        {
+            "appointment_date": "2026-04-01 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:1}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:7}}"
+        },
+        {
+            "appointment_date": "2026-05-28 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:8}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:8}}"
+        },
+        {
+            "appointment_date": "2026-04-07 11:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:2}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:9}}"
+        },
+        {
+            "appointment_date": "2026-04-09 11:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:8}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:10}}"
+        },
+        {
+            "appointment_date": "2026-04-17 11:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:7}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:11}}"
+        },
+        {
+            "appointment_date": "2026-03-27 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:6}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:12}}"
+        },
+        {
+            "appointment_date": "2026-03-30 15:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:8}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:13}}"
+        },
+        {
+            "appointment_date": "2026-05-26 10:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:11}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:14}}"
+        },
+        {
+            "appointment_date": "2026-03-26 09:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:3}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:15}}"
+        },
+        {
+            "appointment_date": "2026-05-11 09:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:0}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:16}}"
+        },
+        {
+            "appointment_date": "2026-04-30 10:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:17}}"
+        },
+        {
+            "appointment_date": "2026-05-04 10:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:12}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:18}}"
+        },
+        {
+            "appointment_date": "2026-03-24 11:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:19}}"
+        },
+        {
+            "appointment_date": "2026-04-15 12:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:6}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:20}}"
+        },
+        {
+            "appointment_date": "2026-03-27 12:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:0}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:21}}"
+        },
+        {
+            "appointment_date": "2026-04-10 14:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:4}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:22}}"
+        },
+        {
+            "appointment_date": "2026-03-20 14:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:13}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:23}}"
+        },
+        {
+            "appointment_date": "2026-04-23 15:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:12}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:24}}"
+        },
+        {
+            "appointment_date": "2026-04-06 16:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:10}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:25}}"
+        },
+        {
+            "appointment_date": "2026-03-24 15:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:11}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:26}}"
+        },
+        {
+            "appointment_date": "2026-04-27 16:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:6}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:27}}"
+        },
+        {
+            "appointment_date": "2026-04-10 09:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:4}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:28}}"
+        },
+        {
+            "appointment_date": "2026-04-14 09:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:3}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:29}}"
+        },
+        {
+            "appointment_date": "2026-04-06 10:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:14}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:30}}"
+        },
+        {
+            "appointment_date": "2026-05-11 10:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:1}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:31}}"
+        },
+        {
+            "appointment_date": "2026-05-11 11:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:8}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:32}}"
+        },
+        {
+            "appointment_date": "2026-03-30 11:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:4}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:33}}"
+        },
+        {
+            "appointment_date": "2026-04-10 12:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:34}}"
+        },
+        {
+            "appointment_date": "2026-03-31 12:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:10}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:35}}"
+        },
+        {
+            "appointment_date": "2026-05-06 14:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:7}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:36}}"
+        },
+        {
+            "appointment_date": "2026-05-18 14:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:10}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:37}}"
+        },
+        {
+            "appointment_date": "2026-05-11 15:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:4}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:38}}"
+        },
+        {
+            "appointment_date": "2026-04-09 15:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:3}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:39}}"
+        },
+        {
+            "appointment_date": "2026-04-03 16:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:1}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:40}}"
+        },
+        {
+            "appointment_date": "2026-03-30 16:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:14}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:41}}"
+        },
+        {
+            "appointment_date": "2026-04-23 09:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:4}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:42}}"
+        },
+        {
+            "appointment_date": "2026-03-20 09:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:10}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:43}}"
+        },
+        {
+            "appointment_date": "2026-04-20 10:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:10}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:44}}"
+        },
+        {
+            "appointment_date": "2026-04-02 10:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:8}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:45}}"
+        },
+        {
+            "appointment_date": "2026-05-04 11:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:3}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:46}}"
+        },
+        {
+            "appointment_date": "2026-05-07 11:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:47}}"
+        },
+        {
+            "appointment_date": "2026-05-18 12:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:9}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}",
+            "invoice_id": "{{invoice:48}}"
+        },
+        {
+            "appointment_date": "2026-04-27 12:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:2}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}",
+            "invoice_id": "{{invoice:49}}"
+        },
+        {
+            "appointment_date": "2026-04-01 14:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:9}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-04-09 14:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:14}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-03 15:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:9}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-05-14 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:9}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-27 09:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:11}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-14 10:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:6}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-04-23 10:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:13}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-03-31 11:00:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-03-23 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:1}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-05-18 11:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:11}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-08 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-29 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:9}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-05-12 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-04-28 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:10}}",
+            "service_id": "{{service:2}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-05-04 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:7}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-24 13:30:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:2}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-04-10 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:1}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-03-27 13:00:00",
+            "dietitian_id": "{{dietitian:0}}",
+            "client_id": "{{client:3}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        },
+        {
+            "appointment_date": "2026-03-26 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:2}}",
+            "service_id": "{{service:0}}",
+            "appointment_status_id": "{{appointment_status:1}}"
+        },
+        {
+            "appointment_date": "2026-04-20 13:30:00",
+            "dietitian_id": "{{dietitian:1}}",
+            "client_id": "{{client:5}}",
+            "service_id": "{{service:1}}",
+            "appointment_status_id": "{{appointment_status:0}}"
+        }
+    ],
+    "questionnaire_type": [
+        {
+            "sort_order": 1
+        }
+    ],
+    "questionnaire_type_description": [
+        {
+            "questionnaire_type_id": "{{questionnaire_type:0}}",
+            "language_id": "{{language:0}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "template_file": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "questionnaire_type_id": "{{questionnaire_type:0}}",
+            "language_id": "{{language:1}}",
+            "title": "Initial Session Questionnaire",
+            "template_file": "initial_session_questionnaire_type_template_en.pdf"
+        }
+    ],
+    "questionnaire": [
+        {
+            "appointment_id": "{{appointment:3}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:22}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:24}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:27}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:29}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:31}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:32}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:40}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:49}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:54}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:57}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:68}}",
+            "title": "Ερωτηματολόγιο Αρχικής Συνεδρίας",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        }
+    ],
+    "nutrition_plan": [
+        {
+            "appointment_id": "{{appointment:1}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "initial_session_questionnaire_type_template.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:12}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:13}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:15}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:19}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:21}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:23}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:26}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:33}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:35}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:41}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:43}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:57}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:58}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:67}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        },
+        {
+            "appointment_id": "{{appointment:68}}",
+            "title": "Εβδομαδιαίο Πρόγραμμα Διατροφής",
+            "file_path": "weekly_diet_plan_demo.pdf"
+        }
+    ]
+}

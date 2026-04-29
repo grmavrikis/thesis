@@ -1,0 +1,32 @@
+services:
+  web:
+    build: .
+    container_name: php_web_server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      - TZ=Europe/Athens
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    command: --default-time-zone='Europe/Athens'
+    environment:
+      MYSQL_DATABASE: my_thesis_db
+      MYSQL_USER: my_thesis_user
+      MYSQL_PASSWORD: 9s!9oU1x1
+      MYSQL_ROOT_PASSWORD: 9s!9oU1x1
+      TZ: Europe/Athens
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: pma_tool
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      TZ: Europe/Athens

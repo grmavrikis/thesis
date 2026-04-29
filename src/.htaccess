@@ -1,0 +1,127 @@
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 64M
+    php_value post_max_size 64M
+    php_value memory_limit 256M
+</IfModule>
+
+<IfModule mod_php.c>
+    php_value upload_max_filesize 64M
+    php_value post_max_size 64M
+    php_value memory_limit 256M
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+
+# EXTERNAL REDIRECT FOR GREEK (Remove ?language_code=el)
+# If language_code=el is found in the raw request, strip it and redirect to clean URL.
+RewriteCond %{THE_REQUEST} \?language_code=el [NC]
+RewriteRule ^([^/]+\.php)$ /$1? [R=301,L]
+
+# EXTERNAL REDIRECT FOR ENGLISH (Query -> Path)
+# If language_code=en is found in the raw request, redirect to /subfolder/ path.
+RewriteCond %{THE_REQUEST} \?language_code=en [NC]
+RewriteRule ^(.+\.php)$ /english/$1? [R=301,L]
+# EXCEPTIONS
+# If the requested file or directory exists on the server, serve it as is.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# INTERNAL REWRITE FOR ENGLISH ROOT
+# Map /english/ or /english to index.php internally.
+RewriteRule ^english/?$ index.php?language_code=en [QSA,END]
+
+# INTERNAL REWRITE FOR ENGLISH PHP FILES
+# Map /english/filename.php to filename.php?language_code=en internally.
+RewriteRule ^english/(.+\.php)$ $1?language_code=en [QSA,END]
+
+# VIEW APPOINTMENT STATUS (Greek - Default)
+RewriteRule ^administration/appointment_status/([0-9]+)/?$ administration/view_appointment_status.php?id=$1 [QSA,L]
+
+# VIEW DIETITIAN (Greek - Default)
+RewriteRule ^administration/dietitian/([0-9]+)/?$ administration/view_dietitian.php?id=$1 [QSA,L]
+
+# VIEW TAX (Greek - Default)
+RewriteRule ^administration/tax/([0-9]+)/?$ administration/view_tax.php?id=$1 [QSA,L]
+
+# VIEW SERVICE (Greek - Default)
+RewriteRule ^administration/service/([0-9]+)/?$ administration/view_service.php?id=$1 [QSA,L]
+
+# VIEW QUESTIONNAIRE TYPE (Greek - Default)
+RewriteRule ^administration/questionnaire_type/([0-9]+)/?$ administration/view_questionnaire_type.php?id=$1 [QSA,L]
+
+# VIEW CLIENT (Greek - Default)
+RewriteRule ^administration/client/([0-9]+)/?$ administration/view_client.php?id=$1 [QSA,L]
+
+# VIEW APPOINTMENT (Greek - Default)
+RewriteRule ^administration/appointment/([0-9]+)/?$ administration/view_appointment.php?id=$1 [QSA,L]
+
+# VIEW QUESTIONNAIRE (Greek - Default)
+RewriteRule ^administration/questionnaire/([0-9]+)/?$ administration/view_questionnaire.php?id=$1 [QSA,L]
+
+# VIEW NUTRITION PLAN (Greek - Default)
+RewriteRule ^administration/nutrition_plan/([0-9]+)/?$ administration/view_nutrition_plan.php?id=$1 [QSA,L]
+
+# VIEW INVOICE PLAN (Greek - Default)
+RewriteRule ^administration/invoice/([0-9]+)/?$ administration/view_invoice.php?id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW APPOINTMENT (Greek - Default)
+RewriteRule ^portal/appointment/([0-9]+)/?$ portal/view_appointment.php?id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW NUTRITION PLAN (Greek - Default)
+RewriteRule ^portal/nutrition_plan/([0-9]+)/?$ portal/view_nutrition_plan.php?id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW QUESTIONNAIRE (Greek - Default)
+RewriteRule ^portal/questionnaire/([0-9]+)/?$ portal/view_questionnaire.php?id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW CLIENT (Greek - Default)
+RewriteRule ^portal/client/([0-9]+)/?$ portal/view_client.php?id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW INVOICE (Greek - Default)
+RewriteRule ^portal/invoice/([0-9]+)/?$ portal/view_invoice.php?id=$1 [QSA,L]
+
+# VIEW APPOINTMENT STATUS (English)
+RewriteRule ^english/administration/appointment_status/([0-9]+)/?$ administration/view_appointment_status.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW DIETITIAN (English)
+RewriteRule ^english/administration/dietitian/([0-9]+)/?$ administration/view_dietitian.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW TAX (English)
+RewriteRule ^english/administration/tax/([0-9]+)/?$ administration/view_tax.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW SERVICE (English)
+RewriteRule ^english/administration/service/([0-9]+)/?$ administration/view_service.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW QUESTIONNAIRE TYPE (English)
+RewriteRule ^english/administration/questionnaire_type/([0-9]+)/?$ administration/view_questionnaire_type.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW CLIENT (English)
+RewriteRule ^english/administration/client/([0-9]+)/?$ administration/view_client.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW APPOINTMENT (English)
+RewriteRule ^english/administration/appointment/([0-9]+)/?$ administration/view_appointment.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW QUESTIONNAIRE (English)
+RewriteRule ^english/administration/questionnaire/([0-9]+)/?$ administration/view_questionnaire.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW NUTRITION PLAN (English)
+RewriteRule ^english/administration/nutrition_plan/([0-9]+)/?$ administration/view_nutrition_plan.php?language_code=en&id=$1 [QSA,L]
+
+# VIEW NUTRITION PLAN (English)
+RewriteRule ^english/administration/invoice/([0-9]+)/?$ administration/view_invoice.php?language_code=en&id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW APPOINTMENT (English)
+RewriteRule ^english/portal/appointment/([0-9]+)/?$ portal/view_appointment.php?language_code=en&id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW NUTRITION PLAN (English)
+RewriteRule ^english/portal/nutrition_plan/([0-9]+)/?$ portal/view_nutrition_plan.php?language_code=en&id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW QUESTIONNAIRE (English)
+RewriteRule ^english/portal/questionnaire/([0-9]+)/?$ portal/view_questionnaire.php?language_code=en&id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW CLIENT (English)
+RewriteRule ^english/portal/client/([0-9]+)/?$ portal/view_client.php?language_code=en&id=$1 [QSA,L]
+
+# CLIENT PORTAL VIEW INVOICE (English)
+RewriteRule ^english/portal/invoice/([0-9]+)/?$ portal/view_invoice.php?language_code=en&id=$1 [QSA,L]

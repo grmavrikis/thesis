@@ -939,8 +939,6 @@ textarea {
     gap: 8px;
 }
 
-.custom-admin-table .sort-icon {}
-
 .custom-admin-table td.sorted-column {
     background-color: rgba(0, 123, 255, 0.03);
     font-weight: 500;
@@ -1468,8 +1466,6 @@ input[type="number"].form-control {
 }
 
 /* --- ACCOUNT --- */
-.account-page {}
-
 .account-page .content-box {
     display: flex;
     align-items: flex-start;
@@ -1480,12 +1476,6 @@ input[type="number"].form-control {
 .account-page .content-box .menu-options {
     flex: 1;
 }
-
-.account-page .content-box .menu-options .menu-option {}
-
-.account-page .content-box .menu-options .menu-option {}
-
-.account-page .content-box .menu-options .menu-option {}
 
 .account-page .content-box .menu-options .menu-option {
     display: block;
@@ -1501,22 +1491,15 @@ input[type="number"].form-control {
     background-color: #E8F0FE;
 }
 
-.account-page .content-box .page-content {}
-
 .account-page .content-box .page-content {
     flex: 6;
 }
-
-.account-page .content-box .page-content .info-box {}
-
-.account-page .content-box .page-content .info-box h2 {}
 
 .account-page .content-box .page-content .title h2 {
     display: inline-block;
     margin-right: 20px;
 }
 
-.account-page .content-box .page-content .info-box .title {}
 
 .account-page .content-box .page-content .info-box .field-block {
     display: flex;
@@ -1535,7 +1518,6 @@ input[type="number"].form-control {
     color: #9dabb4;
 }
 
-.account-page .content-box .page-content .info-box p strong {}
 
 .account-page .content-box .page-content .info-box p span {
     display: block;
@@ -1671,8 +1653,6 @@ input[type="number"].form-control {
         text-align: center;
     }
 
-    .account-page {}
-
     .account-page .maincontent {
         padding: 20px;
     }
@@ -1693,45 +1673,9 @@ input[type="number"].form-control {
         justify-content: flex-start;
     }
 
-    .account-page .content-box .menu-options .menu-option {}
-
-    .account-page .content-box .menu-options .menu-option {}
-
-    .account-page .content-box .menu-options .menu-option {}
-
     .account-page .content-box .menu-options .menu-option {
         white-space: nowrap;
     }
-
-    .account-page .content-box .menu-options .menu-option.active,
-    .account-page .content-box .menu-options .menu-option:hover {}
-
-    .account-page .content-box .page-content {}
-
-    .account-page .content-box .page-content {}
-
-    .account-page .content-box .page-content .info-box {}
-
-    .account-page .content-box .page-content .info-box {}
-
-    .account-page .content-box .page-content .title h2 {}
-
-    .account-page .content-box .page-content .info-box .title {}
-
-    .account-page .content-box .page-content .info-box .field-block {}
-
-    .account-page .content-box .page-content .info-box p {}
-
-    .account-page .content-box .page-content .info-box p span {}
-
-    .account-page .content-box .page-content .info-box p strong {}
-
-    .account-page .content-box .page-content .info-box p span {}
-
-    /* --- EDIT ICON --- */
-    .edit-info {}
-
-    .edit-info .edit-link {}
 
 }
 

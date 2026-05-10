@@ -6,4 +6,5 @@
     <?php require_once '../includes/js_texts.php'; ?>
     <script src="/js/scripts.js"></script>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>

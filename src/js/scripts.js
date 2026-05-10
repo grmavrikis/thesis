@@ -289,9 +289,8 @@ async function initDynamicTable(containerId, apiUrl, page = 1, limit = results_l
             if (!filtersInitialized && response.filters) {
                 FilterManager.render(
                     response.filters,
-                    // On Apply: Ξανακαλούμε την initDynamicTable στην 1η σελίδα
+                    // Call initDynamicTable at first page when applying filters to reset pagination
                     () => initDynamicTable(containerId, apiUrl, 1, limit, currentSortColumn, currentSortDirection),
-                    // On Clear: Ξανακαλούμε την initDynamicTable στην 1η σελίδα
                     () => initDynamicTable(containerId, apiUrl, 1, limit, currentSortColumn, currentSortDirection)
                 );
                 filtersInitialized = true;
@@ -334,7 +333,6 @@ function renderTableRows(containerId, data, columns, sortColumn, sortDirection) 
             ? (sortDirection === 'asc' ? 'arrow-up.svg' : 'arrow-down.svg')
             : '';
 
-        // Δυναμικό χτίσιμο των classes
         let classes = ['sortable-header'];
         if (col.field.includes('id')) {
             classes.push('col-id');
@@ -369,7 +367,7 @@ function renderTableRows(containerId, data, columns, sortColumn, sortDirection) 
             <input type="checkbox" class="row-checkbox" value="${row.id}">
         </td>
         ${columns.map(col => {
-        // Έλεγχος αν η στήλη είναι αυτή που γίνεται sort
+        // Check if the current column is the sorted column to apply the .sorted-column class
         const isSorted = sortColumn === col.field;
         const cellClass = isSorted ? 'class="sorted-column"' : '';
 
@@ -457,7 +455,7 @@ function attachTableListeners(apiUrl, page, limit, sortColumn, sortDirection) {
 
             const field = th.getAttribute('data-field');
 
-            // Logic: Αν είναι η ίδια στήλη, άλλαξε direction. Αν είναι άλλη, βάλε ASC.
+            // If the same column is clicked, toggle the sort direction. Otherwise, set to ascending.
             if (sortColumn === field) {
                 sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
             } else {
@@ -465,18 +463,12 @@ function attachTableListeners(apiUrl, page, limit, sortColumn, sortDirection) {
                 sortDirection = 'asc';
             }
 
-            console.log(`Sorting by: ${sortColumn}, Direction: ${sortDirection}`);
-
-            // Εδώ θα καλέσουμε την initDynamicTable αργότερα.
-            // Για τώρα, απλά ξανακάνουμε render για να δούμε τα βελάκια να αλλάζουν (mock update)
-            // initDynamicTable('table-root', currentApiUrl, 1); 
             const tableContainerId = 'table-root';
-
             initDynamicTable(tableContainerId, apiUrl, page, limit, sortColumn, sortDirection);
         });
     }
 
-    // Row Click & Checkbox Logic (Event Delegation στο tbody)
+    // Click & Checkbox Logic
     if (tbody) {
         // Clear any previous listeners to avoid duplicates
         tbody.onclick = function (e) {
@@ -495,7 +487,7 @@ function attachTableListeners(apiUrl, page, limit, sortColumn, sortDirection) {
 
                 row.classList.toggle('selected-row', checkbox.checked);
 
-                // Sync το "Select All" checkbox
+                // Sync "Select All" checkbox
                 if (!checkbox.checked && selectAllCheckbox) {
                     selectAllCheckbox.checked = false;
                 }
@@ -560,11 +552,9 @@ function buildForm(containerId, submitUrl, schema, languages = []) {
             inputHtml = `<textarea id="${inputId}" name="main[${fieldId}]" class="form-control" ${attributesHtml} ${config.required ? 'required' : ''}>${val}</textarea>`;
         }
         else if (config.type === 'file') {
-            // Παίρνουμε το κείμενο του κουμπιού από το config ή βάζουμε ένα default
             const buttonText = config.button_label || js_texts.select_file;
             const hasExistingFile = config.default && config.default !== '';
 
-            // Αν υπάρχει αρχείο, δείχνουμε το download link
             let downloadLinkHtml = '';
             if (hasExistingFile) {
                 downloadLinkHtml = `
@@ -591,10 +581,8 @@ function buildForm(containerId, submitUrl, schema, languages = []) {
                                 </div>`;
         }
         else if (config.type === 'view_file') {
-            // Παίρνουμε το κείμενο του κουμπιού από το config ή βάζουμε ένα default
             const hasExistingFile = config.default && config.default !== '';
 
-            // Αν υπάρχει αρχείο, δείχνουμε το download link
             let downloadLinkHtml = '';
             if (hasExistingFile) {
                 downloadLinkHtml = `
@@ -613,7 +601,6 @@ function buildForm(containerId, submitUrl, schema, languages = []) {
                                 </div>`;
         }
         else if (config.type === 'custom_text') {
-            // Χρησιμοποιούμε div αντί για input γιατί το περιεχόμενο είναι HTML (με <br>)
             inputHtml = `<div id="${inputId}" class="custom-text-display">${val}</div>`;
         }
         else if (config.type === 'custom_code') {
@@ -665,11 +652,9 @@ function buildForm(containerId, submitUrl, schema, languages = []) {
                 if (config.type === 'textarea') {
                     inputHtml = '<textarea id="' + inputId + '" name="translations[' + lang.language_id + '][' + fieldId + ']" class="form-control" ' + (config.required ? 'required' : '') + '>' + val + '</textarea>';
                 } else if (config.type === 'file') {
-                    // Παίρνουμε το κείμενο του κουμπιού από το config ή βάζουμε ένα default
                     const buttonText = config.button_label || js_texts.select_file;
                     const hasExistingFile = config.default && config.default !== '';
 
-                    // Αν υπάρχει αρχείο, δείχνουμε το download link
                     let downloadLinkHtml = '';
                     if (hasExistingFile) {
                         downloadLinkHtml = `<div class="existing-file-info">
@@ -785,7 +770,6 @@ function buildForm(containerId, submitUrl, schema, languages = []) {
         if (!this.checkValidity()) {
             // Focus the first invalid field for better UX
             const firstError = this.querySelector(':invalid');
-            console.log(firstError);
             if (firstError) firstError.focus();
 
             return false;
@@ -804,10 +788,9 @@ async function handleFormSubmission(formElement) {
     const url = formElement.getAttribute('data-action');
 
     if (url === '' || url === undefined || url === null) { return; }
-    // Το FormData συλλέγει αυτόματα όλα τα πεδία, συμπεριλαμβανομένων των αρχείων (input type="file")
+    // formData contains all the form fields with their names and values
     const formData = new FormData(formElement);
 
-    // Προσθήκη language_code με έλεγχο ύπαρξης του στοιχείου
     const langCodeEl = document.getElementById('language_code');
     if (langCodeEl) {
         formData.append('language_code', langCodeEl.value);
@@ -817,11 +800,8 @@ async function handleFormSubmission(formElement) {
         const response = await fetch(url, {
             method: 'POST',
             body: formData
-            // ΣΗΜΑΝΤΙΚΟ: Δεν ορίζουμε Content-Type header. 
-            // Ο browser θα το θέσει αυτόματα σε multipart/form-data με το σωστό boundary.
         });
 
-        // Έλεγχος αν η απάντηση είναι έγκυρο JSON
         const result = await response.json();
 
         if (result.success) {
@@ -832,9 +812,7 @@ async function handleFormSubmission(formElement) {
                 window.location.href = result.redirect_url;
             }
         } else if (result.errors) {
-            // Εμφάνιση σφαλμάτων από τον server
             for (const [fieldId, message] of Object.entries(result.errors)) {
-                // Το fieldId πρέπει να αντιστοιχεί στο id του DOM (π.χ. main-title ή lang-1-name)
                 const errorSpan = document.getElementById('error-' + fieldId);
                 const inputField = document.getElementById(fieldId);
 
@@ -848,7 +826,7 @@ async function handleFormSubmission(formElement) {
                 }
             }
 
-            // Focus στο πρώτο πεδίο που παρουσίασε σφάλμα
+            // Focus and scroll to the first error
             const firstErrorInput = formElement.querySelector('.input-error');
             if (firstErrorInput) {
                 firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -880,10 +858,9 @@ function updateFileName(input, displayId) {
 }
 
 /**
- * Δημιουργεί και εμφανίζει τον loader στο body
+ * Creates and displays a loader overlay on the page.
  */
 function showLoader() {
-    // Έλεγχος αν υπάρχει ήδη για να μην μπουν διπλοί
     if (document.getElementById('main-page-loader')) return;
 
     const loader = document.createElement('div');
@@ -898,7 +875,7 @@ function showLoader() {
 }
 
 /**
- * Αφαιρεί τον loader από το body
+ * Removes the loader overlay from the page if it exists.
  */
 function hideLoader() {
     const loader = document.getElementById('main-page-loader');
@@ -908,21 +885,18 @@ function hideLoader() {
 }
 
 /**
- * Καθαρίζει τα προηγούμενα σφάλματα από τη φόρμα
+ * Clears previous errors from the form.
  */
 function clearPopupErrors(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    // Αφαίρεση της κλάσης error από τα inputs
     container.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-
-    // Αφαίρεση των μηνυμάτων σφάλματος
     container.querySelectorAll('.error-message').forEach(el => el.remove());
 }
 
 /**
- * Εμφανίζει σφάλμα σε συγκεκριμένο πεδίο σύμφωνα με τη δομή του project
+ * Displays an error message for a specific field.
  */
 function renderManualError(fieldId, message) {
     const field = document.getElementById(fieldId);
@@ -931,13 +905,12 @@ function renderManualError(fieldId, message) {
     const parent = field.closest('.form-input');
     if (!parent) return;
 
-    // Προσθήκη κλάσης στο input
     field.classList.add('error');
 
-    // Δημιουργία και προσθήκη του μηνύματος (όπως κάνει το AJAX handling σου)
+    // Create error message element
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
-    errorDiv.style.color = '#f44747'; // Ή χρησιμοποίησε την κλάση από το main.css
+    errorDiv.style.color = '#f44747';
     errorDiv.style.fontSize = '12px';
     errorDiv.style.marginTop = '4px';
     errorDiv.innerText = message;
@@ -945,6 +918,11 @@ function renderManualError(fieldId, message) {
     parent.appendChild(errorDiv);
 }
 
+/**
+ * Validates the invoice charge form fields before submission.
+ * Checks for required fields and valid numeric values, and displays error messages.
+ * @returns {boolean} - Returns true if the form is valid, false otherwise.
+ */
 function invoiceChargeValidation() {
     const popupId = 'chargePopup';
     clearPopupErrors(popupId);
@@ -978,11 +956,14 @@ function invoiceChargeValidation() {
     return !hasErrors;
 }
 
-function resetPopupFields(saveCharge = '') {
-    // 1. Μηδενισμός του editing state
+/**
+ * Resets the invoice charge popup fields to their default state.
+ */
+function resetPopupFields() {
+    // Clear editing state
     editingIndex = null;
 
-    // 2. Καθαρισμός των inputs
+    // Clear input fields
     const desc = document.getElementById('charge_description');
     const clean = document.getElementById('charge_clean_amount');
     const total = document.getElementById('charge_total_display');
@@ -991,9 +972,10 @@ function resetPopupFields(saveCharge = '') {
     if (desc) desc.value = '';
     if (clean) clean.value = '';
     if (total) total.value = '0.00';
-    if (tax) tax.selectedIndex = 0; // Επαναφορά στο πρώτο option (0%)
+    // Reset tax dropdown to default 
+    if (tax) tax.selectedIndex = 0;
 
-    // 3. Καθαρισμός σφαλμάτων (αν υπάρχουν από προηγούμενο validation)
+    // Clear previous errors
     clearPopupErrors('chargePopup');
 }
 
@@ -1352,7 +1334,7 @@ async function initDashboardLatestClients(containerId) {
 function calculateVatValues(net, final, vatFactor) {
     if (vatFactor === undefined || vatFactor === null) return null;
 
-    // Καθαρισμός factor και μετατροπή σε δεκαδικό rate
+    // Clear % character from the string and convert to number between 0 and 100
     const numericFactor = parseFloat(vatFactor.toString().replace('%', ''));
     if (isNaN(numericFactor)) return null;
 
@@ -1360,12 +1342,12 @@ function calculateVatValues(net, final, vatFactor) {
     let calculatedNet, calculatedFinal;
 
     if (net !== null && net !== undefined && net !== 0) {
-        // Από Καθαρή σε Τελική
+        // Calculate final price from net
         calculatedNet = parseFloat(net);
         calculatedFinal = calculatedNet * (1 + vatRate);
     }
     else if (final !== null && final !== undefined && final !== 0) {
-        // Από Τελική σε Καθαρή
+        // Calculate net price from final
         calculatedFinal = parseFloat(final);
         calculatedNet = calculatedFinal / (1 + vatRate);
     }
@@ -1384,7 +1366,7 @@ const FilterManager = {
     config: [],
 
     /**
-     * Παραγωγή του UI μέσα στο popup βάσει του value_type
+     * Renders the filter UI inside the popup based on the value_type
      */
     render: function (filtersConfig, onApply, onClear) {
         this.config = filtersConfig;
@@ -1409,7 +1391,7 @@ const FilterManager = {
                     ${filter.label}
                 </label>`;
 
-            // Διακριτές περιπτώσεις βάσει value_type
+            // Render input based on value_type
             switch (filter.value_type) {
                 case 'select':
                     const currentSelectVal = this.state[filter.id] ?? filter.default ?? '';
@@ -1431,7 +1413,7 @@ const FilterManager = {
                     break;
 
                 case 'number':
-                    // Μετατροπή του attributes object σε string
+                    // Convert the attributes object to a string
                     const attributesHtml = filter.attributes
                         ? Object.entries(filter.attributes)
                             .map(([key, value]) => `${key}="${value}"`)
@@ -1441,11 +1423,11 @@ const FilterManager = {
                     const currentNum = filter.default ?? 0;
 
                     html += `<input type = "number"
-            id = "filter_${filter.id}"
-            class="form-control filter-input-number"
-            value = "${currentNum}"
-            placeholder = "0"
-                                ${attributesHtml}> `; // Προσθήκη των attributes εδώ
+                                id = "filter_${filter.id}"
+                                class="form-control filter-input-number"
+                                value = "${currentNum}"
+                                placeholder = "0"
+                                ${attributesHtml}> `;
                     break;
                 case 'date':
                     const currentDate = this.state[filter.id] || '';
@@ -1459,7 +1441,6 @@ const FilterManager = {
                     html += `<div class="checkbox-options" style = "display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 10px;" > `;
                     if (filter.options) {
                         filter.options.forEach(option => {
-                            // Επειδή το PHP στέλνει fetchAll(), το χρώμα είναι στο key 'color'
                             const colorVal = option.color;
                             const isChecked = Array.isArray(this.state[filter.id]) && this.state[filter.id].includes(colorVal) ? 'checked' : '';
 
@@ -1485,7 +1466,6 @@ const FilterManager = {
                     html += `<div class="checkbox-options-group" > `;
                     if (filter.options) {
                         filter.options.forEach(option => {
-                            // Υποθέτουμε ότι το PHP στέλνει id/value και label/name
                             const optVal = option.value;
                             const optLabel = option.text;
                             const isChecked = Array.isArray(this.state[filter.id]) && this.state[filter.id].includes(String(optVal)) ? 'checked' : '';
@@ -1519,18 +1499,18 @@ const FilterManager = {
 
         // --- Event Listeners ---
 
-        // 1. Date Inputs
+        // Date Inputs
         container.querySelectorAll('.filter-input-date').forEach(input => {
             const fieldId = input.id.replace('filter_', '');
             input.addEventListener('change', () => this.updateState(fieldId, input.value));
         });
 
-        // 2. Color Checkboxes (UI visual toggle)
+        // Color Checkboxes
         container.querySelectorAll('.filter-checkbox').forEach(checkbox => {
             const fieldId = checkbox.name.replace('filter_', '');
             const box = checkbox.nextElementSibling;
 
-            // Αρχικό στυλ αν είναι ήδη checked (από προηγούμενο state)
+            // Initial highlight if the checkbox is pre-checked based on state
             if (checkbox.checked) box.style.borderColor = '#007bff';
 
             checkbox.addEventListener('change', () => {
@@ -1538,7 +1518,8 @@ const FilterManager = {
 
                 if (checkbox.checked) {
                     this.state[fieldId].push(checkbox.value);
-                    box.style.borderColor = '#007bff'; // Highlight επιλογής
+                    // Highlight the color box when selected
+                    box.style.borderColor = '#007bff';
                 } else {
                     this.state[fieldId] = this.state[fieldId].filter(v => v !== checkbox.value);
                     box.style.borderColor = 'transparent';
@@ -1548,14 +1529,13 @@ const FilterManager = {
             });
         });
 
-        // 3. Generic Checkbox Group Listeners
+        // Generic Checkbox Group Listeners
         container.querySelectorAll('.filter-checkbox-generic').forEach(checkbox => {
             const fieldId = checkbox.name.replace('filter_', '');
 
             checkbox.addEventListener('change', () => {
                 if (!this.state[fieldId]) this.state[fieldId] = [];
 
-                // Πάντα δουλεύουμε με strings για να αποφύγουμε θέματα τύπων δεδομένων (int vs string)
                 const val = String(checkbox.value);
 
                 if (checkbox.checked) {
@@ -1566,23 +1546,21 @@ const FilterManager = {
                     this.state[fieldId] = this.state[fieldId].filter(v => v !== val);
                 }
 
-                // Αν το array είναι άδειο, καθαρίζουμε το state για το συγκεκριμένο id
+                // If the array is empty after removal, delete the key from state
                 if (this.state[fieldId].length === 0) delete this.state[fieldId];
             });
         });
 
-        // 4. Number Inputs
+        // Number Inputs
         container.querySelectorAll('.filter-input-number').forEach(input => {
             const fieldId = input.id.replace('filter_', '');
 
-            // Χρησιμοποιούμε 'input' αντί για 'change' για real-time ενημέρωση αν χρειάζεται, 
-            // ή 'change' αν θέλεις να ενημερώνεται αφού χάσει το focus.
             input.addEventListener('input', () => {
                 this.updateState(fieldId, input.value);
             });
         });
 
-        // 5. Select Input Listeners
+        // Select Input Listeners
         container.querySelectorAll('.filter-input-select').forEach(select => {
             const fieldId = select.id.replace('filter_', '');
 
@@ -1591,13 +1569,13 @@ const FilterManager = {
             });
         });
 
-        // 6. Apply Button
+        // Apply Button
         document.getElementById('btn-apply-filters').addEventListener('click', () => {
             onApply();
             closeModal();
         });
 
-        // 7. Clear Button
+        // Clear Button
         document.getElementById('btn-clear-filters').addEventListener('click', () => {
             this.state = {};
             this.render(this.config, onApply, onClear);
@@ -1665,7 +1643,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const chargesContainer = document.getElementById('main-invoice_charges');
     const popupCalcInputs = [document.getElementById('charge_clean_amount'), document.getElementById('charge_tax')];
     const downloadInvoicePDF = document.getElementById('download-invoice-pdf');
-    const emailInvoiceCustomer = document.getElementById('email-invoice-customer');
     const serviceCleanCost = document.getElementById('main-clean_cost');
 
     if (logoutButton) {
@@ -1948,10 +1925,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // AJAX ανανέωση slots όταν αλλάζει η ημερομηνία ραντεβού
+    // Dynamically refresh appointment slots when the appointment date changes
     const appointmentDateInput = document.getElementById('main-appointment_date');
     const appointmentTimeSelect = document.getElementById('main-appointment_time');
-    // Εντοπισμός του hidden input για το appointment_id
     const appointmentIdInput = document.getElementById('main-appointment_id');
 
     if (appointmentDateInput && appointmentTimeSelect) {
@@ -1960,19 +1936,16 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!selectedDate) return;
 
             try {
-                // Εμφάνιση ενός "Loading..." στα options μέχρι να έρθουν τα δεδομένα
-                appointmentTimeSelect.innerHTML = '<option value="">' + (js_texts?.loading || 'Φόρτωση...') + '</option>';
+                appointmentTimeSelect.innerHTML = '<option value="">' + js_texts.loading + '</option>';
 
                 const url = '/ajax/get_appointment_available_slots.php';
                 const method = 'POST';
 
-                // Προετοιμασία των δεδομένων
                 const data = {
                     appointment_date: selectedDate,
                     language_code: document.getElementById('language_code').value
                 };
 
-                // Αν υπάρχει το element και έχει τιμή, το προσθέτουμε στο data
                 if (appointmentIdInput && appointmentIdInput.value) {
                     data.appointment_id = appointmentIdInput.value;
                 }
@@ -1980,7 +1953,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const response = await aAjaxCall(url, method, data);
 
                 if (response && response.html_options) {
-                    // Αντικατάσταση των options με τα νέα από τον server
                     appointmentTimeSelect.innerHTML = response.html_options;
                 }
                 else if (response && response.message) {
@@ -1988,7 +1960,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             } catch (error) {
                 console.error('Error fetching appointment slots:', error);
-                appointmentTimeSelect.innerHTML = '<option value="">' + (js_texts?.error_loading_slots || 'Σφάλμα φόρτωσης') + '</option>';
+                appointmentTimeSelect.innerHTML = '<option value="">' + js_texts.error_loading_slots + '</option>';
             }
         });
     }
@@ -2092,7 +2064,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     let chargeIndex = 0;
-    let editingIndex = null; // null = προσθήκη, number = επεξεργασία συγκεκριμένου index
+    let editingIndex = null;
 
     if (saveCharge) {
         saveCharge.addEventListener('click', function () {
@@ -2107,8 +2079,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const total = document.getElementById('charge_total_display').value;
 
             if (editingIndex !== null) {
-                // LOGIC: UPDATE EXISTING
-                const row = document.querySelector(`.added - charge - row[data - index="${editingIndex}"]`);
+                // Update existing row
+                const row = document.querySelector(`.added-charge-row[data-index="${editingIndex}"]`);
 
                 // Update Hidden Inputs
                 row.querySelector(`input[name = "charge_description[${editingIndex}]"]`).value = desc;
@@ -2118,12 +2090,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Update Visual Text
                 row.querySelector('.charge-text').innerHTML =
-                    `${desc} | Καθαρό: ${clean} € | ΦΠΑ: ${taxText} | Σύνολο: <b>${total} €</b>`;
+                    `${desc} | ${js_texts.charge_clean}: ${clean} € | ${js_texts.charge_vat}: ${taxText} | ${js_texts.charge_total}: <b>${total} €</b>`;
 
-                editingIndex = null; // Reset state
-                saveCharge.innerText = 'Προσθήκη';
+                // Reset state
+                editingIndex = null;
+                saveCharge.innerText = js_texts.add;
             } else {
-                // LOGIC: ADD NEW
+                // Add new row
                 const rowId = chargeIndex;
                 const newRow = document.createElement('div');
                 newRow.className = 'added-charge-row';
@@ -2132,15 +2105,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 newRow.innerHTML = `
                 <div class="charge-info" >
-                    <span class="charge-text">${desc} | Καθαρό: ${clean} € | ΦΠΑ: ${taxText} | Σύνολο: <b>${total} €</b></span>
+                    <span class="charge-text">${desc} | ${js_texts.charge_clean}: ${clean} € | ${js_texts.charge_vat}: ${taxText} | ${js_texts.charge_total}: <b>${total} €</b></span>
                     <input type="hidden" name="charge_description[${rowId}]" value="${desc}">
                     <input type="hidden" name="charge_clean_amount[${rowId}]" value="${clean}">
                     <input type="hidden" name="charge_tax_id[${rowId}]" value="${taxId}">
                     <input type="hidden" name="charge_total_display[${rowId}]" value="${total}">
                 </div>
                 <div class="charge-actions">
-                    <img src="/images/edit.svg" class="edit-charge" style="cursor:pointer; width:18px; margin-right:10px;" title="Επεξεργασία">
-                    <img src="/images/delete.svg" class="delete-charge" style="cursor:pointer; width:18px;" title="Διαγραφή">
+                    <img src="/images/edit.svg" class="edit-charge" style="cursor:pointer; width:18px; margin-right:10px;" title="${js_texts.edit}">
+                    <img src="/images/delete.svg" class="delete-charge" style="cursor:pointer; width:18px;" title="${js_texts.delete}">
                 </div>
             `;
 
@@ -2161,7 +2134,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const index = row.getAttribute('data-index');
 
             if (e.target.classList.contains('delete-charge')) {
-                if (confirm('Σίγουρη διαγραφή αυτής της χρέωσης;')) {
+                if (confirm(js_texts.confirm_delete_charge)) {
                     row.remove();
                     updateGrandTotals();
                 }
@@ -2241,7 +2214,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (result.success && result.download_url) {
                     const link = document.createElement('a');
 
-                    // Προσθήκη timestamp μόνο στο URL του link για να αποφύγουμε το caching
+                    // Append a timestamp to the URL to prevent caching issues
                     link.href = result.download_url + '?t=' + new Date().getTime();
 
                     link.setAttribute('download', result.filename);
@@ -2268,62 +2241,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (emailInvoiceCustomer) {
-        emailInvoiceCustomer.addEventListener('click', async function (e) {
-            e.preventDefault();
-
-            if (confirm('Θέλετε να αποσταλεί το παραστατικό με email στον πελάτη;')) {
-                const invoiceId = this.getAttribute('data-invoice-id');
-                const clientId = this.getAttribute('data-client-id');
-
-                console.log('Sending email for invoice:', invoiceId);
-
-                try {
-                    const languageCode = document.getElementById('language_code').value;
-                    // Point to the new download endpoint
-                    const url = '/ajax/email_invoice_pdf.php';
-                    const method = 'POST';
-                    const data = {
-                        language_code: languageCode,
-                        invoice_id: invoiceId,
-                        client_id: clientId
-                    };
-
-                    showLoader();
-
-                    const result = await aAjaxCall(url, method, data);
-
-                    if (result.success && result.download_url) {
-                        const link = document.createElement('a');
-
-                        // Προσθήκη timestamp μόνο στο URL του link για να αποφύγουμε το caching
-                        link.href = result.download_url + '?t=' + new Date().getTime();
-
-                        link.setAttribute('download', result.filename);
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                    }
-
-                    hideLoader();
-
-                    if (result.message && result.message !== '') {
-                        alert(result.message);
-                    }
-
-                    if (!result.success && result.errors) {
-                        alert(result.errors.join('\n'));
-                    }
-                } catch (error) {
-                    hideLoader();
-                    alert(js_texts.unknown_server_error_message);
-                }
-            }
-
-            return false;
-        });
-    }
-
     if (serviceCleanCost) {
         serviceCleanCost.addEventListener('blur', function () {
             const cleanVal = this.value;
@@ -2331,7 +2248,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const vatResults = calculateVatValues(cleanVal, null, taxVal);
             if (vatResults) {
                 const totalVal = vatResults.final;
-                document.getElementById('main-final_cost').innerHTML = totalVal.toFixed(2) + ' €';
+                let totalString = '';
+                if (!isNaN(totalVal)) {
+                    totalString = totalVal.toFixed(2) + ' €';
+                }
+                document.getElementById('main-final_cost').innerHTML = totalString;
             }
         });
     }

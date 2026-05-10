@@ -90,7 +90,7 @@ h3 {
 }
 
 header {
-    background-color: #34495e;
+    background-color: rgb(52 73 94);
 }
 
 .breadcrumb,
@@ -188,7 +188,6 @@ header {
     gap: 10px;
 }
 
-/* Το φόντο που καλύπτει την οθόνη */
 .custom-loader-overlay {
     position: fixed;
     top: 0;
@@ -196,15 +195,12 @@ header {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    /* Ημιδιαφανές λευκό */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    /* Πάνω από όλα */
 }
 
-/* Το μέγεθος του spinner */
 .custom-loader-overlay img {
     width: 80px;
     height: 80px;
@@ -390,7 +386,7 @@ header {
 /* --- MAIN IMAGE BANNER --- */
 .main-banner {
     height: 500px;
-    background-image: url('../images/main_banner_placeholder.jpg');
+    background-image: url('../images/main_banner_placeholder.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -401,7 +397,7 @@ header {
 }
 
 .banner-content {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(52, 73, 94, 0.8);
     padding: 30px 40px;
     border-radius: 10px;
 }
@@ -594,10 +590,8 @@ textarea {
 
 .hidden-file-input {
     display: none;
-    /* Κρύβουμε το default του browser */
 }
 
-/* Container για το custom κείμενο */
 .custom-text-display {
     background-color: #f9f9f9;
     border: 1px solid #e0e0e0;
@@ -611,12 +605,10 @@ textarea {
     width: 100%;
 }
 
-/* Αν θέλεις να μοιάζει λίγο με "disabled" input αλλά πιο όμορφο */
 .custom-text-display {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Στυλ για το label όταν συνοδεύει custom_text */
 .form-input label {
     font-weight: 600;
     margin-bottom: 8px;
@@ -635,7 +627,6 @@ textarea {
     font-weight: 400 !important;
 }
 
-/* Container για το file input και το υπάρχον αρχείο */
 .custom-file-upload {
     display: flex;
     flex-direction: column;
@@ -662,12 +653,10 @@ textarea {
     color: #218838;
 }
 
-/* Κρύψιμο του default browser input */
 .hidden-file-input {
     display: none;
 }
 
-/* Custom κουμπί επιλογής */
 .btn-custom-file {
     background: #6c757d;
     color: white;
@@ -689,22 +678,15 @@ textarea {
     font-style: italic;
 }
 
-/* Ο γονέας που περιέχει το link και το κουμπί */
 .custom-file-upload {
     display: flex;
-    /* Ενεργοποιεί το flexbox */
     flex-direction: row;
-    /* Τα βάζει σε σειρά (οριζόντια) */
     align-items: center;
-    /* Τα ευθυγραμμίζει κάθετα στο κέντρο */
     gap: 15px;
-    /* Απόσταση μεταξύ link και κουμπιού */
     flex-wrap: wrap;
-    /* Αν δεν χωράνε (π.χ. σε κινητά), να αλλάζουν σειρά */
     margin-top: 5px;
 }
 
-/* Το link του υπάρχοντος αρχείου */
 .existing-file-info {
     display: flex;
     align-items: center;
@@ -729,11 +711,9 @@ textarea {
 
 .delete-file-icon img {
     width: 18px;
-    /* Συγκεκριμένο μέγεθος όπως ζήτησες */
     height: auto;
 }
 
-/* Το div που περιέχει το κρυφό input και το label */
 .custom-file-upload {
     display: inline-flex;
     align-items: center;
@@ -791,7 +771,6 @@ textarea {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     display: none;
-    /* Hidden by default */
     z-index: 2500;
     align-items: center;
     justify-content: center;
@@ -799,7 +778,6 @@ textarea {
 
 .charge-popup-container.active {
     display: flex;
-    /* Appears with .active class */
 }
 
 .charge-popup-content {
@@ -816,7 +794,6 @@ textarea {
     padding: 20px;
 }
 
-/* Utilities για ευθυγράμμιση Clean Amount & Tax */
 .form-row {
     display: flex;
     gap: 15px;
@@ -826,14 +803,11 @@ textarea {
     flex: 1;
 }
 
-/* Εναρμόνιση με τα input του main.css */
 .charge-form-body .form-input input,
 .charge-form-body .form-input select {
     margin-bottom: 0;
-    /* Override για να μην χαλάει το layout μέσα στο popup */
 }
 
-/* Hover effect στο κλείσιμο όπως το login form */
 .charge-popup-content .close-popup:hover {
     color: #e74c3c;
 }
@@ -965,22 +939,15 @@ textarea {
     gap: 8px;
 }
 
-.custom-admin-table .sort-icon {
-    /* transition: transform 0.3s ease; */
-}
+.custom-admin-table .sort-icon {}
 
-/* Διακριτικό χρώμα για την ενεργή στήλη sorting */
 .custom-admin-table td.sorted-column {
     background-color: rgba(0, 123, 255, 0.03);
-    /* Πολύ απαλό γκρι */
     font-weight: 500;
-    /* Ελαφρώς πιο έντονο κείμενο αν θες */
 }
 
-/* Αν θες να διαφέρει όταν κάνεις hover σε όλη τη γραμμή */
 .custom-admin-table tr:hover td.sorted-column {
     background-color: rgba(0, 123, 255, 0.05);
-    /* Ελαφρύ μπλε στο hover */
 }
 
 .dashboard-table-container {
@@ -1115,7 +1082,6 @@ input[type="number"].form-control {
     border-top: 1px dashed #e0e0e0;
     display: flex;
     flex-wrap: wrap;
-    /* Κενό μεταξύ των δύο blocks (Created / Modified) */
     gap: 1.5rem 3rem;
     font-size: 0.85rem;
     color: #626262;
@@ -1145,7 +1111,6 @@ input[type="number"].form-control {
     font-size: 0.75rem;
     letter-spacing: 0.5px;
     white-space: nowrap;
-    /* Κρατάει το "ΔΗΜΙΟΥΡΓΗΘΗΚΕ:" ενωμένο */
 }
 
 .metadata-value {
@@ -1188,68 +1153,40 @@ input[type="number"].form-control {
 .create-invoice,
 .add-invoice-charge {
     background-color: #E8F0FE;
-    /* Απαλό γκρι-μπλε φόντο */
     color: #1967D2;
-    /* Έντονο μπλε για το κείμενο */
     border: 1px solid #d1d9e0;
 }
 
 .create-invoice:hover,
 .add-invoice-charge:hover {
     background-color: #1967D2;
-    /* Αντιστροφή χρωμάτων στο hover */
     color: #ffffff;
     border-color: #1967D2;
 }
 
 .cancel-invoice {
     background-color: #FEE8E8;
-    /* Απαλό ροζ-κόκκινο φόντο */
     color: #D21919;
-    /* Έντονο κόκκινο για το κείμενο */
     border: 1px solid #E0D1D1;
     transition: all 0.3s ease;
-    /* Προαιρετικό για πιο ομαλή αλλαγή */
 }
 
 .cancel-invoice:hover {
     background-color: #2cd219;
-    /* Αντιστροφή χρωμάτων στο hover (κόκκινο φόντο) */
     color: #ffffff;
     border-color: #2cd219;
 }
 
 .download-invoice-pdf {
     background-color: #f0f9f1;
-    /* Πολύ απαλό πράσινο */
     color: #28a745;
-    /* Καθαρό πράσινο του "Success" */
     border: 1px solid #c3e6cb;
 }
 
 .download-invoice-pdf:hover {
     background-color: #28a745;
-    /* Γεμάτο πράσινο */
     color: #ffffff;
-    /* Λευκό κείμενο */
     border-color: #28a745;
-}
-
-/* Email Invoice Action */
-.email-invoice-customer {
-    background-color: #f0f4f9;
-    /* Πολύ απαλό μπλε */
-    color: #007bff;
-    /* Καθαρό μπλε (Primary/Info) */
-    border: 1px solid #d1e3f8;
-}
-
-.email-invoice-customer:hover {
-    background-color: #007bff;
-    /* Γεμάτο μπλε */
-    color: #ffffff;
-    /* Λευκό κείμενο */
-    border-color: #007bff;
 }
 
 .view-invoice {
@@ -1278,7 +1215,6 @@ input[type="number"].form-control {
     border: none;
     font-weight: 600;
     cursor: pointer;
-    /* transition: all 0.3s; */
     margin-left: 10px;
     line-height: 24px;
     box-sizing: border-box;
@@ -1303,7 +1239,6 @@ input[type="number"].form-control {
 
 /* --- BUTTON HOVER EFFECTS --- */
 
-/* Primary Blue Button Hover */
 .btn-primary:hover {
     background-color: #0069d9;
     border-color: #0062cc;
@@ -1311,7 +1246,6 @@ input[type="number"].form-control {
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
 
-/* Outline Danger Button Hover */
 .btn-outline-danger:hover {
     background-color: #dc3545;
     color: #ffffff;
@@ -1319,7 +1253,6 @@ input[type="number"].form-control {
     box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
 }
 
-/* Active state for a "pressed" feel */
 .btn-primary:active,
 .btn-outline-danger:active {
     transform: translateY(0);
@@ -1361,17 +1294,12 @@ input[type="number"].form-control {
 .search-container {
     position: relative;
     display: flex;
-    /* Χρήση flex για ευθυγράμμιση */
     align-items: stretch;
-    /* Τεντώνει τα περιεχόμενα στο ύψος του container */
-
-    /* Ή το ύψος που έχουν τα buttons σου */
 }
 
 .search-input {
     flex: 1;
     padding: 8px 40px 8px 12px;
-    /* Χώρος δεξιά για το wrapper */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
@@ -1381,20 +1309,15 @@ input[type="number"].form-control {
 .search-icon-wrapper {
     position: absolute;
     right: 1px;
-    /* Για να μην καλυπτει το border του input αν είναι 1px */
     top: 1px;
     bottom: 1px;
     width: 35px;
     display: flex;
     align-items: center;
-    /* Κεντράρει το img κάθετα */
     justify-content: center;
-    /* Κεντράρει το img οριζόντια */
     cursor: pointer;
     background: transparent;
-    /* Μπορείς να βάλεις ένα ελαφρύ γκρι στο hover */
     border-radius: 0 4px 4px 0;
-    /* transition: background 0.3s; */
     z-index: 2;
 }
 
@@ -1404,7 +1327,6 @@ input[type="number"].form-control {
 
 .search-icon {
     width: 18px;
-    /* Το μέγεθος που σου αρέσει */
     height: 18px;
     display: block;
 }
@@ -1415,7 +1337,6 @@ input[type="number"].form-control {
     border: 1px solid #ccc;
     color: #333;
     width: 40px;
-    /* Ίδιο ύψος με το search input */
     height: 40px;
     display: flex;
     align-items: center;
@@ -1487,20 +1408,15 @@ input[type="number"].form-control {
 }
 
 .filter-popup-content {
-    /* Ελαφρώς μεγαλύτερο padding πάνω για να μην κολλάει ο τίτλος στο X */
     padding: 0 0 0 0;
 }
 
-/* Όταν υπάρχουν ενεργά φίλτρα */
 #filterTrigger.filter-active {
     background-color: #e8f0fe;
-    /* Ελαφρύ γαλάζιο background */
     border-color: #3498db;
-    /* Μπλε border */
     position: relative;
 }
 
-/* Προαιρετικά: Μια μικρή κουκκίδα πάνω στο icon */
 #filterTrigger.filter-active::after {
     content: '';
     position: absolute;
@@ -1509,7 +1425,6 @@ input[type="number"].form-control {
     width: 8px;
     height: 8px;
     background-color: #e74c3c;
-    /* Κόκκινη κουκκίδα */
     border-radius: 50%;
     border: 1px solid white;
 }
@@ -1667,7 +1582,6 @@ input[type="number"].form-control {
     border: 1px solid #bdc3c7;
     border-radius: 4px;
     box-sizing: border-box;
-    /* transition: border-color 0.3s, box-shadow 0.3s; */
 }
 
 
@@ -1688,7 +1602,6 @@ input[type="number"].form-control {
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    /* transition: all 0.3s, transform 0.3s; */
 }
 
 .submit-button:hover {
@@ -1824,7 +1737,6 @@ input[type="number"].form-control {
 
 @media screen and (max-width: 768px) {
 
-    /* Κρύβουμε το header του πίνακα */
     .account-page table thead {
         display: none;
     }
@@ -1854,7 +1766,6 @@ input[type="number"].form-control {
         justify-content: flex-end;
     }
 
-    /* Εδώ εμφανίζουμε το label από το data-attribute */
     .account-page table td::before {
         content: attr(data-label);
         position: absolute;
@@ -1878,33 +1789,26 @@ input[type="number"].form-control {
     .toolbar-right {
         display: flex;
         flex-wrap: wrap;
-        /* Επιτρέπει στα στοιχεία να αλλάζουν γραμμή αν δεν χωράνε */
         gap: 10px;
         width: 100%;
         justify-content: flex-start;
         margin-top: 15px;
-        /* Διαχωρισμός από το h2 ή το αριστερό toolbar */
     }
 
     .search-container {
         order: 1;
-        /* Το search πρώτο */
         width: 100%;
-        /* Πιάνει όλο το πλάτος στο mobile */
         margin-right: 0;
     }
 
     .search-container input {
         width: 100%;
-        /* Το input να γεμίζει το container */
         height: 45px;
-        /* Μεγαλύτερο touch target */
     }
 
     .btn-filter-icon {
         order: 2;
         flex: 1;
-        /* Μοιράζεται τον χώρο με τα άλλα κουμπιά */
         justify-content: center;
         height: 40px;
         background-color: #f8f9fa;
@@ -1923,13 +1827,11 @@ input[type="number"].form-control {
     #btn-add-new {
         order: 4;
         width: 100%;
-        /* Το κουμπί "Προσθήκη" συνήθως το θέλουμε full-width για έμφαση */
         justify-content: center;
         height: 40px;
         margin-left: 0;
     }
 
-    /* Κοινά στυλ για όλα τα κουμπιά στο mobile */
     .btn-filter-icon,
     #btn-bulk-delete,
     #btn-add-new {
@@ -1941,7 +1843,6 @@ input[type="number"].form-control {
         margin: 0;
     }
 
-    /* Στοχεύουμε τα dashboard tables */
     #dashboard-appointments-root table,
     #dashboard-pending-plans-root table,
     #dashboard-financial-kpis-root table {
@@ -1952,7 +1853,6 @@ input[type="number"].form-control {
     #dashboard-pending-plans-root thead,
     #dashboard-financial-kpis-root thead {
         display: none;
-        /* Κρύβουμε τα headers */
     }
 
     #dashboard-appointments-root tr,
@@ -1971,7 +1871,6 @@ input[type="number"].form-control {
     #dashboard-financial-kpis-root td {
         display: flex;
         justify-content: 空间-between;
-        /* Το label αριστερά, η τιμή δεξιά */
         align-items: center;
         text-align: right;
         padding: 10px 15px;
@@ -1984,11 +1883,9 @@ input[type="number"].form-control {
     #dashboard-financial-kpis-root td:last-child {
         border-bottom: none;
         background-color: #fafafa;
-        /* Διαφορετικό χρώμα στο τελευταίο cell (συνήθως actions) */
         justify-content: center;
     }
 
-    /* Το Label (π.χ. Ημερομηνία, Πελάτης) */
     #dashboard-appointments-root td::before,
     #dashboard-pending-plans-root td::before,
     #dashboard-financial-kpis-root td::before {
@@ -2009,7 +1906,6 @@ input[type="number"].form-control {
 
 @media screen and (max-width: 370px) {
 
-    /* Κάνουμε όλα τα στοιχεία του toolbar να πιάνουν 100% πλάτος */
     .toolbar-right {
         flex-direction: column;
         gap: 8px;
@@ -2020,34 +1916,25 @@ input[type="number"].form-control {
     #btn-bulk-delete,
     #btn-add-new {
         width: 100% !important;
-        /* Επιβολή πλήρους πλάτους */
         margin: 0 !important;
         flex: none !important;
-        /* Ακυρώνουμε το flex: 1 που βάλαμε πριν */
     }
 
-    /* Ρυθμίσεις για τα κουμπιά που είχαν μεγάλο λεκτικό */
     .btn-filter-icon,
     #btn-bulk-delete {
         padding: 0 10px;
-        /* Μειώνουμε ελαφρώς το εσωτερικό padding */
         font-size: 13px;
-        /* Μικραίνουμε ελάχιστα τη γραμματοσειρά αν χρειάζεται */
         justify-content: center;
         white-space: nowrap;
-        /* Αποφεύγουμε το σπάσιμο κειμένου */
         overflow: hidden;
         text-overflow: ellipsis;
-        /* Αν παρόλα αυτά δεν χωράει, βάζει αποσιωπητικά αντί να σπάει το layout */
     }
 
-    /* Βελτίωση εμφάνισης των εικονιδίων μέσα στα κουμπιά */
     .btn-filter-icon i,
     #btn-bulk-delete i {
         margin-right: 5px;
     }
 
-    /* Στα tables, μειώνουμε το padding-left για να έχει χώρο η τιμή δεξιά */
     .account-page table td {
         padding-left: 40%;
         font-size: 13px;

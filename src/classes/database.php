@@ -7,7 +7,6 @@ class Database
 {
     private PDO $pdo;
     private PDOStatement|false $statement = false;
-    /* ΟΙ ΣΤΑΘΕΡΕΣ ΕΔΩ ΠΡΕΠΕΙ ΝΑ ΓΙΝΟΥΝ ENV VARIABLES */
     private string $host = DB_HOST;
     private string $user = DB_USER;
     private string $pass = DB_PASS;

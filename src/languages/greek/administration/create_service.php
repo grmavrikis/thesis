@@ -6,4 +6,5 @@ define('HEADING_NEW_SERVICE', 'Νέα Υπηρεσία');
 define('TEXT_ITEMS_TITLE', 'Τίτλος');
 define('TEXT_ITEMS_SORT_ORDER', 'Σειρά');
 define('TEXT_ITEMS_CLEAN_PRICE', 'Καθαρή Τιμή');
+define('TEXT_ITEMS_FINAL_PRICE', 'Τελική Τιμή');
 define('TEXT_ITEMS_TAX', 'ΦΠΑ');

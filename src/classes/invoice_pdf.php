@@ -14,7 +14,7 @@ class InvoicePDF extends TCPDF
 
         $this->SetCreator(PDF_CREATOR);
         $this->SetAuthor($this->data['issuer']['company_title']);
-        $this->SetTitle('Παραστατικό #' . $this->data['invoice']['serial_number']);
+        $this->SetTitle(TEXT_INVOICE_PDF_INVOICE_NUMBER . $this->data['invoice']['serial_number']);
 
         $this->SetMargins(15, 15, 15);
         $this->SetAutoPageBreak(TRUE, 20);
@@ -47,7 +47,7 @@ class InvoicePDF extends TCPDF
             $logo_path = __DIR__ . '/../uploads/' . ltrim($this->data['issuer']['logo'], './');
             if (file_exists($logo_path))
             {
-                $this->Image($logo_path, 15, 15, 45, '', '', '', 'T', false, 300, '', false, false, 0, false, false, false);
+                $this->Image($logo_path, 15, 15, 25, '', '', '', 'T', false, 300, '', false, false, 0, false, false, false);
             }
         }
         $html = '
@@ -66,8 +66,7 @@ class InvoicePDF extends TCPDF
             '</span>
                 </td>
             </tr>
-        </table>
-        <div style="border-bottom:1px solid #333; line-height:5px;">&nbsp;</div>';
+        </table>';
         $this->writeHTML($html, true, false, false, false, '');
     }
 

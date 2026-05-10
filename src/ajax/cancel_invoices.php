@@ -24,12 +24,17 @@ try
         sendResponse(false, ERROR_NO_IDS_PROVIDED);
     }
 
-    $inData = $db->prepareIn($data['ids'], 'invoice_id');
+    $inv = new Invoice();
+    $count_cancelled = 0;
+    foreach ($data['ids'] as $invoice_id)
+    {
+        if ($inv->cancelInvoice($invoice_id))
+        {
+            $count_cancelled++;
+        }
+    }
 
-    $records = ['canceled' => 1];
-    $canceled = $db->update('invoice', $records, "invoice_id IN ({$inData['placeholders']})", $inData['params']);
-
-    sendResponse(true, sprintf(SUCCESS_BULK_CANCEL, $canceled));
+    sendResponse(true, sprintf(SUCCESS_BULK_CANCEL, $count_cancelled));
 }
 catch (Exception $e)
 {

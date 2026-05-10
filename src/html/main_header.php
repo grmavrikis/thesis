@@ -8,7 +8,7 @@ $scope = $auth->getAccessScope();
 
             <div class="top-banner-info">
                 <span><?php echo TEXT_SYSTEM_NAME; ?></span>
-                <span><a href="tel:+30210XXXXXXX">Τηλ.: +30 210 XXXX XXX</a></span>
+                <span><a href="tel:+30210XXXXXXX"> <?php echo TEXT_HEADER_TEL; ?> +30 210 XXXX XXX</a></span>
             </div>
             <div class="top-banner-login">
                 <?php

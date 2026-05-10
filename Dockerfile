@@ -1,10 +1,10 @@
 FROM php:8.2-apache
 
-# Ενεργοποίηση του mod_rewrite (για το RewriteEngine)
+# Enabling mod_rewrite for Apache (for RewriteEngine)
 RUN a2enmod rewrite
 
-# Εγκατάσταση των drivers για MySQL
+# Installing MySQL drivers
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Επανεκκίνηση του Apache για να δει τις αλλαγές
+# Restarting Apache to apply changes
 RUN service apache2 restart

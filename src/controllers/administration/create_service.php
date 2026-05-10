@@ -44,6 +44,12 @@ $form_schema = [
             'required' => true,
             'default'  => 0
         ],
+        'final_cost' => [
+            'type'     => 'custom_text',
+            'label'    => TEXT_ITEMS_FINAL_PRICE,
+            'required' => false,
+            'default'  => ''
+        ],
         'tax_id' => [
             'type'     => 'select',
             'label'    => TEXT_ITEMS_TAX,

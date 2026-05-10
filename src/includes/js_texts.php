@@ -59,5 +59,11 @@
         revenue_no_results: "<?php echo JS_REVENUE_NO_RESULTS; ?>",
         client_fullname: "<?php echo JS_CLIENT_FULLNAME; ?>",
         client_no_results: "<?php echo JS_CLIENT_NO_RESULTS; ?>",
+        error_loading_slots: "<?php echo JS_ERROR_LOADING_SLOTS; ?>",
+        charge_clean: "<?php echo JS_CHARGE_CLEAN; ?>",
+        charge_vat: "<?php echo JS_CHARGE_VAT; ?>",
+        charge_total: "<?php echo JS_CHARGE_TOTAL; ?>",
+        delete: "<?php echo JS_DELETE; ?>",
+        confirm_delete_charge: "<?php echo JS_CONFIRM_DELETE_CHARGE; ?>"
     };
 </script>

@@ -30,7 +30,7 @@ require_once $pageController->getControllerFile();
         <div class="mainwrapper">
             <div class="home-section">
                 <div class="content-section-image">
-                    <img src="/images/dietitian_info_placeholder.jpg" alt="<?php echo TEXT_IMAGE_ALT_DIETITIAN_INFO; ?>">
+                    <img src="/images/dietitian_info_placeholder.png" alt="<?php echo TEXT_IMAGE_ALT_DIETITIAN_INFO; ?>">
                 </div>
                 <div class="content-section-text">
                     <h2><?php echo TEXT_PHILOSOPHY; ?></h2>

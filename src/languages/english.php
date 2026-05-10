@@ -79,6 +79,8 @@ define('TEXT_INVOICE_PDF_TOTAL_CLEAN', 'Total Net Value:');
 define('TEXT_INVOICE_PDF_TOTAL_VAT', 'Total VAT ');
 define('TEXT_INVOICE_PDF_TOTAL_VALUE', 'Total:');
 define('TEXT_INVOICE_PDF_PAGE', 'Page %s from %s ');
+define('TEXT_INVOICE_PDF_INVOICE_NUMBER', 'Invoice #');
+define('TEXT_HEADER_TEL', 'Phone:');
 
 // Forms
 define('LABEL_FIRSTNAME', 'First Name:');
@@ -186,3 +188,9 @@ define('JS_REVENUE_GROWTH', 'Growth (%)');
 define('JS_REVENUE_NO_RESULTS', 'No financial data found.');
 define('JS_CLIENT_FULLNAME', 'Full name');
 define('JS_CLIENT_NO_RESULTS', 'No clients found.');
+define('JS_ERROR_LOADING_SLOTS', 'Error loading available appointments.');
+define('JS_CHARGE_CLEAN', 'Clean');
+define('JS_CHARGE_VAT', 'VAT');
+define('JS_CHARGE_TOTAL', 'Total');
+define('JS_DELETE', 'Delete');
+define('JS_CONFIRM_DELETE_CHARGE', 'Are you sure you want to delete this charge?');

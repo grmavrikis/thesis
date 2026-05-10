@@ -18,21 +18,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         $invoice_id = isset($input['invoice_id']) ? (int)$input['invoice_id'] : 0;
         if ($invoice_id <= 0)
         {
-            $response['errors'][] = 'Μη έγκυρο ID παραστατικού.';
+            $response['errors'][] = ERROR_INVALID_INVOICE_ID;
             echo json_encode($response);
             exit;
         }
 
         $invoice_obj = new Invoice();
-        // Ανάκτηση πραγματικών δεδομένων από τη βάση
+        // Get the invoice data from the database
         $invoice_data = $invoice_obj->getInvoiceData($invoice_id);
 
         if (!$invoice_data)
         {
-            throw new Exception('Το παραστατικό δεν βρέθηκε.');
+            $response['errors'][] = ERROR_INVOICE_NOT_FOUND;
+            echo json_encode($response);
+            exit;
         }
 
-        // Δημιουργία PDF με τα πραγματικά δεδομένα
+        // Create the PDF
         $pdf = new InvoicePDF($invoice_data, $invoice_data['totals']);
 
         $pdf->generate();
@@ -43,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             mkdir($upload_dir, 0755, true);
         }
 
-        // Ονοματοδοσία αρχείου για αυτόματη υπεργραφή (overwrite)
+        // File naming for automatic overwrite if the same invoice is generated multiple times
         $filename = 'invoice_' . $invoice_data['invoice']['serial_number'] . '.pdf';
         $filepath = $upload_dir . $filename;
 
@@ -55,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         }
         else
         {
-            $response['errors'][] = 'Αποτυχία δημιουργίας αρχείου στον server.';
+            $response['errors'][] = ERROR_CREATE_INVOICE_PDF;
         }
     }
     catch (Exception $e)

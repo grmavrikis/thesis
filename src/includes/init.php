@@ -10,9 +10,7 @@ ini_set('display_startup_errors', 0);
 error_reporting(E_ALL & ~E_NOTICE);
 date_default_timezone_set('Europe/Athens');
 define('BASE_PATH', dirname(__DIR__));
-/* ΟΙ ΣΤΑΘΕΡΕΣ ΕΔΩ ΠΡΕΠΕΙ ΝΑ ΓΙΝΟΥΝ ENV VARIABLES */
-// define('DB_HOST', 'localhost');
-define('DB_HOST', 'db'); // ΕΔΩ: από localhost το κάνουμε db για να δουλέψει με το Docker
+define('DB_HOST', 'db'); // Usually localhost but set to 'db' for Docker setups
 define('DB_USER', 'my_thesis_user');
 define('DB_PASS', '9s!9oU1x1');
 define('DB_NAME', 'my_thesis_db');

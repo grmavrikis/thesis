@@ -1172,9 +1172,9 @@ input[type="number"].form-control {
 }
 
 .cancel-invoice:hover {
-    background-color: #2cd219;
+    background-color: #D21919;
     color: #ffffff;
-    border-color: #2cd219;
+    border-color: #D21919;
 }
 
 .download-invoice-pdf {

@@ -13,6 +13,12 @@ $binDir = $_SERVER['DOCUMENT_ROOT'] . '/bin';
 
 try
 {
+    // Create bin directory if it does not exist
+    if (!is_dir($binDir))
+    {
+        mkdir($binDir, 0755, true);
+    }
+
     // Move index.php to /bin/index.php
     $setupFile = 'index.php';
     $sourceSetup = $_SERVER['DOCUMENT_ROOT'] . '/' . $setupFile;

@@ -225,7 +225,7 @@ require_once 'html/head.php';
                     language_code: languageCode
                 });
                 if (response.success) {
-                    window.location.href = response.redirect_url;
+                    window.location.href = response.redirect_url + '?v=' + Date.now();
                 } else {
                     alert('<?php echo TEXT_INSTALL_INITIALIZATION_ERROR; ?>' + ' ' + response.message);
                     this.disabled = false;

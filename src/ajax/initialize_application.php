@@ -50,6 +50,12 @@ try
         throw new Exception(TEXT_RENAME_MAIN_INDEX_FAILED);
     }
 
+    // Prevent browser cache on redirect after initialization
+    if (function_exists('opcache_reset'))
+    {
+        opcache_reset();
+    }
+
     echo json_encode([
         'success' => true,
         'redirect_url' => $seoUrl->generate('index.php'),
